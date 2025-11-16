@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Đan Tre Mây - Nghệ thuật & Thủ công</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#faf7f0;
+      --accent:#7a5230; /* màu tre */
+      --muted:#6b6b6b;
+      --card:#fff;
+      --radius:12px;
+      font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#222;line-height:1.5}
+    a{color:var(--accent);text-decoration:none}
+
+    /* Header */
+    header{background:linear-gradient(180deg, #fff 0%, #f7efe6 100%);border-bottom:1px solid rgba(0,0,0,0.04);position:sticky;top:0;z-index:50}
+    .container{max-width:1100px;margin:0 auto;padding:1rem}
+    .nav{display:flex;gap:1rem;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#c08b62);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav ul{display:flex;gap:1rem;align-items:center;margin:0;padding:0;list-style:none}
+    nav li{padding:.35rem .6rem;border-radius:8px}
+    nav li:hover{background:rgba(122,82,48,0.06)}
+    .cta{background:var(--accent);color:#fff;padding:.5rem .9rem;border-radius:10px}
+
+    /* Hamburger for small screens */
+    .hamburger{display:none;border:0;background:none;font-size:1.25rem}
+    @media (max-width:800px){
+      nav ul{display:none;position:absolute;right:1rem;top:72px;flex-direction:column;background:var(--card);box-shadow:0 6px 24px rgba(0,0,0,.08);padding:.75rem;border-radius:10px}
+      .hamburger{display:block}
+    }
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:2.5rem 0}
+    .hero h1{font-size:2rem;margin:0 0 .5rem}
+    .hero p{color:var(--muted);margin:0 0 1rem}
+    .hero .card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 20px rgba(0,0,0,.04)}
+    .hero .img{border-radius:10px;overflow:hidden;height:320px;background-size:cover;background-position:center;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+    @media (max-width:960px){.hero{grid-template-columns:1fr} .hero .img{height:260px}}
+
+    /* Sections */
+    section{padding:2rem 0}
+    h2{margin:0 0 1rem}
+    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 20px rgba(0,0,0,.04)}
+
+    /* Gallery */
+    .gallery img{width:100%;height:200px;object-fit:cover;border-radius:8px}
+
+    /* Process */
+    .steps{display:flex;gap:1rem;flex-wrap:wrap}
+    .step{flex:1;min-width:180px;padding:1rem;border-radius:10px;background:linear-gradient(180deg,#fff,#faf6ef);border:1px solid rgba(122,82,48,0.06)}
+
+    /* Footer */
+    footer{background:#f3ece2;padding:1.5rem 0;border-top:1px solid rgba(0,0,0,.04)}
+    .foot-grid{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .social{display:flex;gap:.5rem}
+
+    /* Utilities */
+    .muted{color:var(--muted)}
+    .small{font-size:.9rem}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo">DT</div>
+      <div>
+        <div style="font-weight:700">Đan Tre Mây</div>
+        <div class="small muted">Nghệ thuật thủ công truyền thống</div>
+      </div>
+    </div>
+
+    <nav aria-label="Chính">
+      <button class="hamburger" aria-controls="main-nav" aria-expanded="false">☰</button>
+      <ul id="main-nav">
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#gallery">Sản phẩm</a></li>
+        <li><a href="#process">Quy trình</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+        <li><a class="cta" href="#contact">Đặt hàng</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container" id="home">
+  <section class="hero">
+    <div>
+      <h1>Đan tre mây — giữ gìn nghề truyền thống</h1>
+      <p>Chúng tôi tạo ra sản phẩm thủ công từ tre và mây: giỏ, đèn, vật trang trí. Mỗi sản phẩm là một câu chuyện, làm bằng tay bởi nghệ nhân địa phương.</p>
+      <div class="card">
+        <strong>Đặc điểm nổi bật</strong>
+        <ul class="small muted">
+          <li>100% nguyên liệu thiên nhiên</li>
+          <li>Thủ công tỉ mỉ, bền đẹp</li>
+          <li>Hỗ trợ làng nghề</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="img" style="background-image:url('https://via.placeholder.com/800x600?text=Đan+tre+mây');" role="img" aria-label="Ảnh sản phẩm đan tre mây"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Giới thiệu</h2>
+    <div class="card small muted">Nghề đan tre mây có lịch sử lâu đời ở Việt Nam. Từ khâu chọn vật liệu, xử lý đến công đoạn đan, mỗi bước đều cần kỹ năng và kinh nghiệm. Dưới đây là vài kiểu sản phẩm phổ biến và quy trình cơ bản.</div>
+  </section>
+
+  <section id="gallery">
+    <h2>Sản phẩm nổi bật</h2>
+    <div class="grid gallery">
+      <div class="card"><img src="https://via.placeholder.com/400x300?text=Giỏ+tre" alt="Giỏ tre"/><h3>Giỏ tre</h3><p class="small muted">Giỏ đa dụng, phù hợp làm quà tặng.</p></div>
+      <div class="card"><img src="https://via.placeholder.com/400x300?text=Đèn+mây" alt="Đèn mây"/><h3>Đèn mây</h3><p class="small muted">Đèn trang trí tạo ánh sáng ấm áp.</p></div>
+      <div class="card"><img src="https://via.placeholder.com/400x300?text=Khay+tre" alt="Khay tre"/><h3>Khay tre</h3><p class="small muted">Khay phục vụ, bền và nhẹ.</p></div>
+      <div class="card"><img src="https://via.placeholder.com/400x300?text=Vật+trang+trí" alt="Vật trang trí"/><h3>Vật trang trí</h3><p class="small muted">Sản phẩm thủ công độc đáo.</p></div>
+    </div>
+  </section>
+
+  <section id="process">
+    <h2>Quy trình cơ bản</h2>
+    <div class="steps">
+      <div class="step"><strong>1. Chọn vật liệu</strong><div class="small muted">Chọn tre, mây tươi, không bị nấm.</div></div>
+      <div class="step"><strong>2. Xử lý</strong><div class="small muted">Luộc, phơi, tẩm để tăng độ bền.</div></div>
+      <div class="step"><strong>3. Đan</strong><div class="small muted">Nghệ nhân đan theo mẫu, kiểm tra mối ghép.</div></div>
+      <div class="step"><strong>4. Hoàn thiện</strong><div class="small muted">Chà mịn, phủ bảo quản, đóng gói.</div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Liên hệ & Đặt hàng</h2>
+    <div class="grid">
+      <div class="card">
+        <form onsubmit="event.preventDefault();alert('Cảm ơn! Chúng tôi đã nhận yêu cầu.');">
+          <label for="name">Họ và tên</label><br>
+          <input id="name" required placeholder="Nguyễn Văn A" style="width:100%;padding:.5rem;margin:.5rem 0;border:1px solid #e6ded0;border-radius:8px" />
+          <label for="email">Email</label><br>
+          <input id="email" type="email" required placeholder="name@email.com" style="width:100%;padding:.5rem;margin:.5rem 0;border:1px solid #e6ded0;border-radius:8px" />
+          <label for="msg">Yêu cầu</label><br>
+          <textarea id="msg" rows="4" placeholder="Mô tả sản phẩm, số lượng..." style="width:100%;padding:.5rem;margin:.5rem 0;border:1px solid #e6ded0;border-radius:8px"></textarea>
+          <button type="submit" style="background:var(--accent);color:#fff;padding:.6rem .9rem;border-radius:10px;border:0">Gửi</button>
+        </form>
+      </div>
+      <div class="card small muted">
+        <p><strong>Địa chỉ:</strong> Làng nghề X, tỉnh Y</p>
+        <p><strong>Điện thoại:</strong> 09xx xxx xxx</p>
+        <p><strong>Email:</strong> info@dantremay.example</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="small muted">© 2025 Đan Tre Mây — Bảo tồn & Phát triển</div>
+      <div class="social small">
+        <div>Facebook</div>
+        <div>Instagram</div>
+        <div>Liên hệ</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple hamburger toggle
+  const btn = document.querySelector('.hamburger');
+  const nav = document.getElementById('main-nav');
+  btn && btn.addEventListener('click', ()=>{
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    if(nav.style.display === 'flex') nav.style.display = 'none'; else nav.style.display = 'flex';
+  });
+</script>
+
+</body>
+</html>
